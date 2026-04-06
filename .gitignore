@@ -1,0 +1,46 @@
+# Environment — contains real secrets, NEVER commit
+.env
+
+# Runtime data — generated at runtime
+data/*.db
+logs/*
+!logs/.gitkeep
+uploads/*
+!uploads/.gitkeep
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# Tests / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# Claude Code internal state
+.claude/
+
+# Internal planning docs (superpowers)
+docs/superpowers/
+
+# OS
+.DS_Store
+Thumbs.db

@@ -1,0 +1,16 @@
+[Unit]
+Description=Excel Report Telegram Bot
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/excel_report_bot
+ExecStart=/opt/excel_report_bot/venv/bin/python -m excel_report_bot.main
+Restart=on-failure
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+EnvironmentFile=/opt/excel_report_bot/.env
+
+[Install]
+WantedBy=multi-user.target
